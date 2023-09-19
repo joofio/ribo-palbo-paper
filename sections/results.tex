@@ -1,20 +1,16 @@
-Median OS in the entire population treated with  CDK4\/6 inhibitors was 46 months (95\%CI 39.4–55.6). Median PFS  was 20.3 months (95\%CI 18.3–24.2). The median OS in the entire population after removing abemaciclib changed very little.
-When comparing Ribociclib and palbociclib with each other, we see that regarding OS, there is not significant difference, but ribociclib is significantly better in terms of PFS (p-value $\le$ 0.001) (figure \ref*{fig:interest}).
+ Median OS in the entire population treated with  CDK4/6 inhibitors was 46 months (95\%CI 39.4–55.6). Median PFS  was 20.3 months (95\%CI 18.3–24.2). The median OS in the entire population after removing abemaciclib changed very little.
+Following this, we compared Palbociclib and riboclib as first line treatment. We found that regarding OS, there is not significant difference among the two, but ribociclib is significantly better in terms of PFS (p-value $\le$ 0.001) (figure \ref*{fig:interest}).
+We did 
 
-We then compared both with a cox-regression, checking that this trends continues where OS shows no significant difference between palbociclib and ribociclib but a significantly better PFS for ribociclib (figure \ref*{fig:cox}). When adjusted to Stage, visceral metastases, Age and ECOG, ribociclib is associated to an HR of 0.44, implying that ribociclib as a first line treatment reduces the risk of the disease progression by ~60\% compared to palbociclib as first line treatment.
-
-When comparing the traditional hormonotherapy with CDK4/6 inhibitors, we see that CDK4/6 inhibitors are significantly better in terms of PFS (p-value $\le$ 0.001) but not OS. When comparing ribociclib first line, we see significant difference both in terms of PFS and OS
-(figure \ref*{fig:grouped}).
-
-When comparing palbociclib and ribociclib adjusted for propensity scores, we see that the trend continues, with no significant difference between the two in terms of OS but significant in terms of PFS (figure \ref*{fig:propensity}). We matched for number of metastases, treatment line, combination drug, ECOG, age at beginning of treatment, bone metastases and visceral metastases.
 
 \begin{figure}[ht]
-  \caption{Survival curves for Palbociclib and Ribociclib - Progression Free Survival and Overall Survival}\label{fig:interest} 
+  \caption{Survival curves for Palbociclib and Ribociclib (1st line) - Progression Free Survival and Overall Survival}\label{fig:interest} 
   \includegraphics[scale=0.4]{figures/interest_curve_both.jpeg}%
 
 \end{figure}
 
 
+We then compared both with a cox regression, checking that the trend seen in figure  \ref{fig:interest} continues where OS shows no significant difference between palbociclib and ribociclib but a significantly better PFS for ribociclib (figure \ref*{fig:cox}). When adjusted to Stage, visceral metastases, Age and ECOG, ribociclib is associated to an HR of 0.44, implying that ribociclib as a first line treatment reduces the risk of the disease progression by $~$60\% compared to palbociclib as first line treatment. The proportional hazards assumption was confirmed with p values all over 0.10.
 \begin{figure}[ht]
   \centering
   \caption{Cox Regression with palbociclib and Ribociclib - Progression Free Survival and Overall Survival}\label{fig:cox} 
@@ -22,18 +18,24 @@ When comparing palbociclib and ribociclib adjusted for propensity scores, we see
 
 \end{figure}
 
+When comparing hormonotherapy with CDK4/6 inhibitors, we see that CDK4/6 inhibitors are significantly better in terms of PFS (p-value $\le$ 0.001) but not OS. When comparing ribociclib as first line, we see significant difference both in terms of PFS and OS
+(figure \ref*{fig:grouped}).
 \begin{figure}[ht]
   \centering
 
-  \caption{Comparision of traditional hormonotherapy and CDK4/6 inhibitors  }\label{fig:grouped} 
+  \caption{Survival curves (OS and PFS) comparing hormonotherapy to CDK4/6 inhibitors  and Ribociclib 1st line }\label{fig:grouped} 
   \includegraphics[scale=0.4]{figures/grouped_curve_both.jpeg}%
 
 \end{figure}
 
+When comparing palbociclib and ribociclib adjusted for ATE weights, we found a different scenario from previous assessments. There is a significant difference between the two in terms of OS and PFS (figure \ref*{fig:propensity}). We calculated the weights taken into account stage, age at treatment start, treatment line and ECOG.
+
 \begin{figure}[ht]
   \centering
 
-  \caption{Comparasion of palbociclib and ribociclib adjusted for propensity scores  }\label{fig:propensity} 
+  \caption{Comparison of palbociclib and ribociclib survival curves adjusted for propensity scores  }\label{fig:propensity} 
   \includegraphics[scale=0.35]{figures/propensity_score_both.jpeg}%
 
 \end{figure}
+
+The Cox regression adjusted for weigths shows that ribociclib is associated to an HR of 0.47 [0-26-0.87], implying that ribociclib reduces the risk of the death by $\sim$50\%  compared to palbociclib. The HR for PFS is 0.44 [0.26-0.62], implying that ribociclib reduces the risk of the disease progression by $\sim$60\% compared to palbociclib, which also indicates the adjustment caused little to no effect on the results (figure \ref{fig:cox}). Proportional hazards assumptions confirmed as well.
